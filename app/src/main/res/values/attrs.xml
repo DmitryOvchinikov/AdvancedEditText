@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AdvancedEditText">
+        <attr name="checkNotEmpty" format="boolean" />
+        <attr name="checkMaximum" format="boolean" />
+        <attr name="checkMinimum" format="boolean" />
+        <attr name="checkEmail" format="boolean" />
+        <attr name="checkCustom" format="boolean" />
+        <attr name="NotEmptyError" format="string" />
+        <attr name="MaximumError" format="string" />
+        <attr name="MinimumError" format="string" />
+        <attr name="EmailError" format="string" />
+        <attr name="CustomError" format="string" />
+    </declare-styleable>
+</resources>
