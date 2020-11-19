@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 //advancedEditText.checkMinimum(5, "Not enough chars!");
                 //advancedEditText.checkMaximum(6, "Too many chars!");
                 //advancedEditText.checkEmail("That's not an email!");
-                advancedEditText.checkNotEmpty("The string cannot be empty!");
+                //advancedEditText.checkNotEmpty("The string cannot be empty!");
+                advancedEditText.check();
 
             }
         });

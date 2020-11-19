@@ -12,6 +12,11 @@
         android:id="@+id/example"
         android:layout_centerInParent="true"
         android:hint="@string/example"
+        app:checkNotEmpty="true"
+        app:notEmptyError="EMPTY!"
+        app:checkCustom="true"
+        app:customError="CUSTOM!"
+        app:customPattern="[abc]"
     />
 
     <Button
