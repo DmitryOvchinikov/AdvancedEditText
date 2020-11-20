@@ -7,26 +7,65 @@
     tools:context=".MainActivity">
 
     <com.android.advancedet.AdvancedEditText
+        android:id="@+id/example_not_empty"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:id="@+id/example"
-        android:layout_centerInParent="true"
-        android:hint="@string/example"
-        app:checkNotEmpty="true"
-        app:notEmptyError="EMPTY!"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:hint="@string/not_empty"
+        app:checkNotEmpty="true" />
+
+    <com.android.advancedet.AdvancedEditText
+        android:id="@+id/example_maximum"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/example_not_empty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="@string/maximum"
+        app:checkMaximum="true"
+        app:maximumNumber="5"
+        />
+
+    <com.android.advancedet.AdvancedEditText
+        android:id="@+id/example_minimum"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/example_maximum"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="@string/minimum"
+        app:checkMinimum="true"
+        app:minimumNumber="10" />
+
+    <com.android.advancedet.AdvancedEditText
+        android:id="@+id/example_email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/example_minimum"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="@string/email"
+        app:checkEmail="true" />
+
+    <com.android.advancedet.AdvancedEditText
+        android:id="@+id/example_custom"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/example_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="@string/custom"
         app:checkCustom="true"
-        app:customError="CUSTOM!"
-        app:customPattern="[abc]"
-    />
+        app:customPattern="[abc]" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/example"
+        android:layout_below="@+id/example_custom"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="@string/check"
-        />
+        android:text="@string/check" />
 
 </RelativeLayout>

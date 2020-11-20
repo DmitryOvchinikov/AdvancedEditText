@@ -11,25 +11,38 @@ import com.android.advancedet.AdvancedEditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    private AdvancedEditText example_not_empty;
+    private AdvancedEditText example_minimum;
+    private AdvancedEditText example_maximum;
+    private AdvancedEditText example_email;
+    private AdvancedEditText example_custom;
+    private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AdvancedEditText advancedEditText = findViewById(R.id.example);
-        Button button = findViewById(R.id.button);
-
+        findViews();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //advancedEditText.checkMinimum(5, "Not enough chars!");
-                //advancedEditText.checkMaximum(6, "Too many chars!");
-                //advancedEditText.checkEmail("That's not an email!");
-                //advancedEditText.checkNotEmpty("The string cannot be empty!");
-                advancedEditText.check();
-
+                example_not_empty.check();
+                example_minimum.check();
+                example_maximum.check();
+                example_email.check();
+                example_custom.check();
             }
         });
+    }
+
+    private void findViews() {
+        example_not_empty = findViewById(R.id.example_not_empty);
+        example_minimum = findViewById(R.id.example_minimum);
+        example_maximum = findViewById(R.id.example_maximum);
+        example_email = findViewById(R.id.example_email);
+        example_custom = findViewById(R.id.example_custom);
+        button = findViewById(R.id.button);
     }
 }

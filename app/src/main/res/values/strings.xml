@@ -2,4 +2,9 @@
     <string name="app_name">AdvancedET_Example</string>
     <string name="check">check</string>
     <string name="example">Example</string>
+    <string name="not_empty">Not Empty</string>
+    <string name="maximum">Maximum</string>
+    <string name="minimum">Minimum</string>
+    <string name="email">Email</string>
+    <string name="custom">Custom</string>
 </resources>

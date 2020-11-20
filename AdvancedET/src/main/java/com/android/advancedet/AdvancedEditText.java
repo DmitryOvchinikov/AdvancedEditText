@@ -127,13 +127,16 @@ public class AdvancedEditText extends androidx.appcompat.widget.AppCompatEditTex
     }
 
     /**
-     * @param num   the number of maximum chars allowed in the EditText
+     * @param num   the number of maximum chars allowed in the EditText, defaults to 20
      * @param error the error message to be shown in case the amount of chars exceeds num
      * @return false when the amount of chars exceeds num, otherwise true
      */
     public boolean checkMaximum(int num, String error) {
         if (error == null) {
             error = DEFAULT_MAXIMUM;
+        }
+        if (num <= 0) {
+            num = DEFAULT_MAX;
         }
         Log.d("oof", "checkMaximum");
         if (Objects.requireNonNull(this.getText().toString().trim()).length() >= num) {
@@ -144,13 +147,16 @@ public class AdvancedEditText extends androidx.appcompat.widget.AppCompatEditTex
     }
 
     /**
-     * @param num   the number of minimum chars allowed in the EditText
+     * @param num   the number of minimum chars allowed in the EditText, defaults to 5
      * @param error the error message to be shown in case the amount of chars exceeds num
      * @return false when the amount of chars is less than num, otherwise true
      */
     public boolean checkMinimum(int num, String error) {
         if (error == null) {
             error = DEFAULT_MINIMUM;
+        }
+        if (num <= 0) {
+            num = DEFAULT_MIN;
         }
         Log.d("oof", "checkMinimum");
         if (Objects.requireNonNull(this.getText().toString().trim()).length() <= num) {
@@ -180,7 +186,7 @@ public class AdvancedEditText extends androidx.appcompat.widget.AppCompatEditTex
     }
 
     /**
-     * @param custom_pattern your custom pattern to be checked against the text
+     * @param custom_pattern your custom pattern to be checked against the text, defaults to [a-zA-Z]*
      * @param error          the error message to be shown in case the string inside the EditText does not
      *                       match your custom pattern
      * @return false when the string does not match your custom pattern, otherwise true
